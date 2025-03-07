@@ -1,6 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//função de densidade populacional
+float densidade_populacao(int populacao, float area){
+    float resultado = (float)populacao/area;
+    return resultado;
+}
+//função de PIB per capta
+float pib_per_capta(float pib, int populacao){
+    float pib_reais = pib * 1000000000; // Converte PIB de bilhões para reais
+    float resultado = pib_reais / (float)populacao;
+    return resultado;
+}
+
 int main() {
     // Variáveis para a primeira carta
     int populacao1, pontos_turisticos1;
@@ -71,6 +83,10 @@ int main() {
     printf("PIB: %.2f bilhões\n", PIB1);
     printf("Pontos Turísticos: %d\n", pontos_turisticos1);
 
+    //Parte do desafio nivel aventureiro
+    printf("Densidade populacional: %.2f hab/km²\n", densidade_populacao(populacao1, area1)); // <== aqui é chamado a função que retorna o calculo de populacao/area
+    printf("PIB per Capita: %.2f reais", pib_per_capta(PIB1, populacao1)); // <== aqui é chamado a função que retorna o calculo de pib/pessoa
+
     // Exibição dos dados da segunda carta
     printf("\n--- Carta 2 ---\n");
     printf("Estado: %c\n", estado2);
@@ -80,6 +96,10 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões\n", PIB2);
     printf("Pontos Turísticos: %d\n", pontos_turisticos2);
+
+    //Parte do desafio nivel aventureiro
+    printf("Densidade populacional: %.2f hab/km²\n", densidade_populacao(populacao2, area2)); // <== aqui é chamado a função que retorna o calculo de populacao/area
+    printf("PIB per Capita: %.2f reais", pib_per_capta(PIB2, populacao2)); // <== aqui é chamado a função que retorna o calculo de pib/pessoa
 
     return 0;
 }
