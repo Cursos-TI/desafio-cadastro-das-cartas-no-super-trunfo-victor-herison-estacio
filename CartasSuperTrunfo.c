@@ -137,5 +137,22 @@ int main() {
     printf("PIB per capita: Carta 1 venceu (%d) \n", pib_per_capita1 > pib_per_capita2);
     printf("Poder: Carta 2 venceu (%d) \n\n\n", poder_cidade2 > poder_cidade2);
 
+    //parte que vai ser mostrada de qualquer forma
+    printf("\n\nA medida de comparação foi o pib e ");
+
+
+    //condicionais if else para verificar se pib1 é maior q pib2
+    if (PIB1 > PIB2)
+    {
+       printf("a carta 1 ganhou. \n");
+    }else
+    {
+        printf("a carta 2 ganhou. \n");
+    }
+    
+    //parte q vai ser mostrada de qualquer forma
+    printf("PIB carta 1: %.2f \n", PIB1);
+    printf("PIB carta 2: %.2f \n", PIB2);
+
     return 0;
 }
